@@ -1,0 +1,114 @@
+:root {
+    --color-a: #2FF0CC;
+    --color-b: #AF22F0;
+    --color-c: #F0EB24;
+    --color-d: #F24F11;
+    --borda: #000000;
+    --fundo-menu: #D7D3DB;
+    --fundo: radial-gradient(#E6E6ED,#CBCBD1,#8D8D91,#4F4F52);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+    background: var(--fundo);
+    background-attachment: fixed;
+}
+
+@keyframes piscadela {
+    50% {
+        background-color: white;
+    }
+}
+
+main {
+    height: 80vmin;
+    width: 80vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}   
+
+main>.cor {
+    width: 50%;
+    height: 50%;
+    border: solid var(--borda) 10px;
+    flex: none;
+}
+
+main>div:nth-child(1) {
+    background-color: var(--color-a);
+    border-top-left-radius: 100%;
+}
+
+main>div:nth-child(2) {
+    background-color: var(--color-b);
+    border-top-right-radius: 100%;
+}
+
+main>div:nth-child(3) {
+    background-color: var(--color-c);
+    border-bottom-left-radius: 100%;
+}
+
+main>div:nth-child(4) {
+    background-color: var(--color-d);
+    border-bottom-right-radius: 100%;
+}
+
+main>div.animate {
+    /* background-color: white; */
+    /* usado no exemplo transition */
+    animation: piscadela .3s ease-in-out;
+    /* animation-name: piscadela;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out; */
+}
+
+.menu {
+    border: solid var(--borda) 30px;
+    width:calc(80vmin/2);
+    height: calc(80vmin/2);
+    background-color:var(--fundo-menu);
+    position: fixed;
+    border-radius: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arima Madurai', cursive;
+    text-transform: uppercase;
+}
+
+div.pontuacao {
+    border: solid var(--borda) 2px;
+    background-color: #00000099;
+    color: #FFFFFF;
+    width: 80%;
+    justify-content: center;
+    display: flex;
+    border-radius: 50px;
+}
+
+button {
+    width: 3em;
+    height: 3em;
+    margin-top:1.5em;
+    border-radius: 50%;
+    background-color: red;
+    border: 2px solid var(--borda);
+    cursor: pointer;
+}
+
+.iniciar {
+    margin-top: 10px;
+}
