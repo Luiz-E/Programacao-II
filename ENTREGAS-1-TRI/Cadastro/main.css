@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+
+:root {
+    font-family: 'Roboto', sans-serif;
+    --ascent-color: #140767;
+    --background-color: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    font-family: 'Lucida Sans Unicode';
+}
+
+body button {
+    background-color: #21156a;
+    color: #FFFFFF
+}
+
+header {
+    height: 3em;
+    padding: .25em;
+    background-color: var(--ascent-color);
+    color: #FFFFFF;
+    margin-bottom: 15px;
+    line-height:2.5em;
+    font-family: 'Comfortaa';
+    border: 8px solid #d0d0d0;
+    border-style: double;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal {
+    border: 1px solid #000000; 
+    background-color: #FFFFFF; 
+    box-shadow: 0px 0px 23px -15px #000000DD;
+    border-radius: 5px;
+    padding: 1em;
+    margin: 2em;
+}
+
+.modal h1 {
+    display: block;
+    border-bottom: 1px solid #000000;
+    margin-bottom: .5em;
+    padding-top: .5em;
+    margin: 0 0 .25em 0;
+    padding: 0;
+}
+
+.modal form > div {
+    margin-bottom: 1em;
+}
+
+.modal form > div > label {
+    display: block;
+}
+
+.modal form > div > input {
+    width: 100%;
+}
+
+.modal div.action {
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #000000;
+    margin-top: .5em;
+    padding-top: .5em;
+
+}
+
+.modal button {
+    color: #FFFFFF;
+}
+
+.modal div.action > button, .action-bar button, .action-bar input {
+    height: 2.2em;
+}
